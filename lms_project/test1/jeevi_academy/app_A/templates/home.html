@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+     body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #388e3c;
+        }
+    
+</head>
+<body>
+    <h1>Welcome to Jeevi Academy!</h1>
+
+
+{% if user.is_authenticated %}
+
+    <p>Welcome, {{ user.username }}!</p>
+
+    <a href="/jeevi_academy/app_A/templates/course_list.html">View courses</a>
+
+    <a herf="/jeevi_academy/app_A/templates/quizzes">Quizzes</a>
+    
+    <a href="/logout/">Logout</a>
+
+{% else %}
+
+    
+<a href="/login/">Login</a>
+
+<br>
+
+<a href="http://127.0.0.1:8000/accounts/signup/teacher/">Sign up as Teacher</a>
+
+<br>
+
+<a href="http://127.0.0.1:8000/accounts/signup/student/">Sign up as Student</a>
+
+{% endif %}
+
+
+
+
+
+</body>
+</html>

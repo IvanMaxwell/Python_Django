@@ -1,0 +1,16 @@
+# Python
+*.pyc
+__pycache__/
+
+
+# Django secret files
+*.sqlite3
+.env
+
+# VSCode / IDE stuff
+.vscode/
+.idea/
+
+# Migrations
+*/migrations/__pycache__/
+*/migrations/*.py[cod]

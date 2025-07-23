@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Newspaper Auth</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+        <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        nav form {
+            margin: 0 5px;
+        }
+
+        nav button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        hr {
+            margin: 0;
+            border: none;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .messages {
+            padding: 15px;
+            margin: 20px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            font-size: 14px;
+        }
+
+       
+        main {
+            padding: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f1f3f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            color: #343a40;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form button[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .errorlist {
+            color: #dc3545;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <button type="submit">signup</button>
+</form>
+ |
+        <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <button type="submit">Login</button>
+</form>
+|
+        <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+  
+        <button type="submit">Logout</button>
+        </form>|
+        
+        <form method="post" action="{% url 'password_change' %}">
+    {% csrf_token %}
+    <button type="submit">password change</button>
+</form>
+ |
+<form method="post" action="{% url 'password_reset' %}">
+    {% csrf_token %}
+    <button type="submit">password reset</button>
+</form>
+
+     
+    </nav>
+    <hr>
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #1a1a1a;
+}
+
+/* Links */
+a {
+    color: #2b7cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Article list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+button, a.button-link {
+    background-color: #2b7cff;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+button:hover, a.button-link:hover {
+    background-color: #1a5fce;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Comments */
+.comment {
+    background-color: #e9f0ff;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.comment strong {
+    display: block;
+    margin-bottom: 0.3rem;
+}

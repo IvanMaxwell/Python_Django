@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Newspaper App{% endblock %}
+
+{% block content %}
+
+</style>
+
+<div class="dashboard-container">
+    <div class="dashboard-header">Welcome to Your Dashboard</div>
+
+    <div class="dashboard-section">
+        <h3>Your Profile</h3>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+
+    <div class="dashboard-section">
+        <h3>Actions</h3>
+        <a href="#" class="button">Update Profile</a>
+        <a href="#" class="button">View Reports</a>
+        <a href="{% url 'articles' %}" class="button">View Articles</a>
+
+    </div>
+</div>
+{% endblock %}

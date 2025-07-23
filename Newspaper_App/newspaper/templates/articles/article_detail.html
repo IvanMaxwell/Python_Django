@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<div style="padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+
+  <!-- Article Title & Content -->
+  <h1>{{ article.title }}</h1>
+  <p>{{ article.article }}</p>
+  <p><small>Published: {{ article.published_date|date:"F j, Y" }}</small></p>
+
+  <!-- Edit / Delete Links -->
+  <div style="margin-top: 10px;">
+    <a href="{% url 'article_edit' article.pk %}" style="margin-right: 10px;">✏️ Edit</a>
+    <a href="{% url 'article_delete' article.pk %}" style="color: red;">🗑 Delete</a>
+  </div>
+
+  <hr>
+
+  <!-- Comments Section -->
+  <h3>💬 Comments ({{ comments|length }})</h3>
+
+  {% for comment in comments %}
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+      <strong>{{ comment.name }}</strong>
+      <span style="font-size: 0.9em; color: #666;"> - {{ comment.created_at|date:"F j, Y H:i" }}</span>
+      <p>{{ comment.body }}</p>
+    </div>
+  {% empty %}
+    <p>No comments yet. Be the first to comment!</p>
+  {% endfor %}
+
+  <hr>
+
+  <!-- Comment Form -->
+  <h3>📝 Leave a Comment</h3>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="padding: 8px 16px; background-color: #2c3e50; color: white; border: none; border-radius: 4px;">
+      Post Comment
+    </button>
+  </form>
+
+</div>
+{% endblock %}

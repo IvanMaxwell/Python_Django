@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+
+    <p>{{ article.content }}</p>
+    <small>Published: {{ article.created_at|date:"d M Y, H:i" }}</small>
+
+    <div>
+        <a href="{% url 'article_edit' article.pk %}">Edit</a> |
+        <a href="{% url 'article_delete' article.pk %}">Delete</a> |
+        <a href="{% url 'article_list' %}">Back to List</a>
+    </div>
+
+    <hr>
+
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <div>
+            <strong>{{ comment.author }}</strong> on {{ comment.created_at|date:"d M Y, H:i" }}<br>
+            {{ comment.text }}
+        </div>
+    {% empty %}
+        <p>No comments yet.</p>
+    {% endfor %}
+
+    <h3>Add a Comment</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Post Comment</button>
+    </form>
+</body>
+</html>
