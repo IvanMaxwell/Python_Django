@@ -1,10 +1,10 @@
-# 🧠 Django Learning Hub — Beginner to Intermediate
+#  Django Learning Hub 
 
 A curated collection of beginner-friendly guides and apps to help you master Django step-by-step. Each module includes clean explanations, code examples, and a linked app folder to test the code live.
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 | No. | Chapter Name               | Guide File Link                                    | Django App Folder                               | Description                                                                 |
 |-----|----------------------------|----------------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------|
@@ -22,14 +22,13 @@ A curated collection of beginner-friendly guides and apps to help you master Dja
 
 ---
 
-## 🧭 Suggested Learning Order
+##  Suggested Learning Order
 
 Start from **Django Overview** to learn basics of django, then follow in order — each chapter builds logically on the previous.
 End with final project of lms_project
 ---
 
-## 👨‍🏫 Author
+##  Author
 
 **Ivan Maxwell**  
-_Building Django the beginner-friendly way — one app at a time._
 
