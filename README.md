@@ -22,11 +22,6 @@ A curated collection of beginner-friendly guides and apps to help you master Dja
 
 ---
 
-##  Suggested Learning Order
-
-Start from **Django Overview** to learn basics of django, then follow in order — each chapter builds logically on the previous.
-End with final project of lms_project
----
 
 ##  Author
 
