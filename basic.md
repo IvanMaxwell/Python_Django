@@ -1,9 +1,8 @@
-# chapter0: Coding 101
+# chapter0: Introduction to Coding 
 
 
----
 
-#  The World of IT 
+## The World of IT 
 
 ## 1.  What Is IT (Information Technology)?
 
@@ -48,7 +47,7 @@ print("Hello, world!")  # This tells the computer to show a message
 
 ---
 
-## Part 1: What Is Python?
+##  What Is Python?
 
 ### Technical Explanation
 
@@ -772,30 +771,7 @@ The computer doesn’t care what text editor you use–the end result is just co
 
 
 
-# Chapter 8 : Newspaper app ( full version )
 
-This is a fully running news paper app combining all three app the accounts ,articles ,pages and config them with their repective templates , this can be easily considered a beginner level project in django
-
-
-let's dive deep into django,
-
-
-
-
-// guide needs to be checked
-
-
-
-end of chapter,
-
-Here is a task for you create a fully running blog app combining all three app the basic blog app ,forms in blog app and authentictaion of blog app and config them with their repective custom templates and try to improve the code quality 
-
-refer to the 
-
-
-# chapter 9: API
-
-need to refered by sir
 
 
 
