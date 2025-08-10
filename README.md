@@ -8,8 +8,8 @@ A curated collection of beginner-friendly guides and apps to help you master Dja
 
 | No. | Chapter Name               | Guide File Link                                    | Django App Folder                               | Description                                                                 |
 |-----|----------------------------|----------------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------|
-| 1   | Django Overview            | [django.md](./django.md)                           | —                                                | Introduction to Django: setup, project structure, core concepts.           |
-| 2   | Hello World App            | [hello_app.md](./hello_app.md)                     | [hello](./hello/)                                | Print “Hello, World!” using views and routing.                             |
+| 1   | Django Overview            | [django.md](./basic.md)                           | —                                                | Introduction to Django: setup, project structure, core concepts.           |
+| 2   | Hello World App            | [hello_app.md](./hello_app.md)                     | [hello](./hello)                                | Print “Hello, World!” using views and routing.                             |
 | 3   | Static Pages App           | [pages_app.md](./pages_app.md)                     | [pages](./pages/)                                | Static home and about pages using CBVs and templates.                      |
 | 4   | Login and Register         | [Login_app.md](./Login_app.md)                     | [accounts](./accounts/)                          | Login, logout, and register with built-in auth views.                      |
 | 5   | Working with Forms         | [forms.md](./forms.md)                             | [forms_demo](./forms_demo/)                      | ModelForms, form validation, and form processing.                          |
